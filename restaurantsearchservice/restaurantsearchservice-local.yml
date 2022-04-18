@@ -3,8 +3,8 @@ server:
 
 spring:
   mvc:
-      pathmatch:
-            matching-strategy: ant_path_matcher
+    pathmatch:
+      matching-strategy: ant_path_matcher
   datasource:
     username: root
     url: jdbc:mysql://localhost:3306/restaurantdb
@@ -25,4 +25,4 @@ eureka:
       defaultZone: http://localhost:8761/eureka
       
 user: user
-password: password  
+password: password
