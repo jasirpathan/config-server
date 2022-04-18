@@ -4,9 +4,6 @@ server:
   port: 8081
 
 spring:
-  mvc:
-      pathmatch:
-            matching-strategy: ant_path_matcher
   datasource:
     username: root
     url: jdbc:mysql://localhost:3306/orderdb
@@ -17,6 +14,9 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
+  mvc:
+      pathmatch:
+            matching-strategy: ant_path_matcher   
 restaurant:
   search:
     item:
