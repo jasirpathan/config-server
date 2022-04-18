@@ -1,1 +1,23 @@
+server:
+  port: 8080
 
+  
+  
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: Customermanagementservice
+          uri: lb://Customermanagementservice
+          predicates:
+            - Path=/customers/**
+        - id: orderingservice
+          uri: lb://orderingservice
+          predicates:
+            - Path=/**
+        - id: restaurantsearchservice
+          uri: lb://restaurantsearchservice
+          predicates:
+            - Path=/**, /restaurants/**
