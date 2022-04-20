@@ -15,7 +15,9 @@ spring:
       ddl-auto: update
   mvc:
     pathmatch:
-      matching-strategy: ant_path_matcher   
+      matching-strategy: ant_path_matcher
+  kafka:
+    bootstrap-servers: http://localhost:9092  
 restaurant:
   search:
     item:
