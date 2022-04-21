@@ -17,7 +17,9 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
   kafka:
-    bootstrap-servers: http://localhost:9092  
+    bootstrap-servers: http://localhost:9092
+    consumer:
+      auto-offset-reset: earliest
 restaurant:
   search:
     item:
